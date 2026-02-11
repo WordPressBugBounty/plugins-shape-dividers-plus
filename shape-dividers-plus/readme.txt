@@ -2,7 +2,7 @@
 Contributors: mdburnette
 Tags: elementor, layout, design, page builder
 Requires at least: 5.0
-Tested up to: 6.3
+Tested up to: 6.9
 Requires PHP: 7.0
 Stable tag: 1.2.4
 License: GPLv2 or later
