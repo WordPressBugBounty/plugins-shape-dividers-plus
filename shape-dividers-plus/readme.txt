@@ -2,19 +2,45 @@
 Contributors: mdburnette
 Tags: elementor, layout, design, page builder
 Requires at least: 5.0
-Tested up to: 6.9
+Tested up to: 6.9.1
 Requires PHP: 7.0
-Stable tag: 1.2.4
+Requires Plugins: elementor
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a number of additional custom shape divider options for Elementor.
+Add 20+ extra SVG shape dividers to Elementor sections and containers.
 
 == Description ==
-Adds a number of additional custom shape divider options for Elementor.
+Shape Dividers Plus extends Elementor with additional custom SVG dividers so you can create more distinctive transitions between sections.
+
+The plugin adds new options directly into Elementor's existing Shape Divider controls, including brush, geometric, paper, wood, tread, and decorative styles.
+
+Key points:
+* Works inside Elementor's native divider UI (no new builder interface to learn).
+* Includes multiple divider categories for different design styles.
+* Supports Elementor divider behaviors such as flip/height options (where applicable).
+* Uses optimized SVG assets for reduced payload size and better front-end performance.
+* Requires Elementor to be installed and active.
 
 == Installation ==
-Upload the shape-dividers-plus plugin to your site and activate it! New dividers will be available in your Elementor settings.
+Recommended (WordPress.org):
+1. In WordPress admin, go to Plugins > Add New.
+2. Search for `Shape Dividers Plus`.
+3. Click Install Now, then Activate.
+4. Make sure Elementor is installed and active.
+5. Edit a page with Elementor and select a Section or Container.
+6. Open the Style tab and expand Shape Divider.
+7. Choose any divider with the `SD+` prefix.
+
+Alternative (upload zip):
+1. In WordPress admin, go to Plugins > Add New > Upload Plugin.
+2. Upload `shape-dividers-plus.zip` and click Install Now.
+3. Activate Shape Dividers Plus.
+
+Alternative (manual):
+1. Upload the `shape-dividers-plus` folder to `/wp-content/plugins/`.
+2. Activate the plugin from Plugins in WordPress admin.
 
 == Screenshots ==
 1. Shape Dividers Plus additional options
@@ -26,6 +52,18 @@ Upload the shape-dividers-plus plugin to your site and activate it! New dividers
 7. Dividers - SD+ Offroad Tire Tread, SD+ Holiday Lights
 
 == Changelog ==
+= 1.2.5 (February 14, 2026) =
+* Improved: removed unreferenced legacy SVG assets to reduce plugin package size.
+* Improved: optimized divider SVG files for smaller payloads and faster rendering.
+* Improved: refactored shape registration internals to avoid global state and reduce runtime overhead.
+* Improved: added explicit Elementor dependency metadata and missing dependency admin notice.
+* Improved: corrected text domain usage and added translation loading hook.
+* Improved: updated WordPress compatibility metadata (`Tested up to: 6.9`).
+* Docs: expanded plugin description and installation instructions.
+
+= 1.2.4 (January 12, 2026) =
+* Improved: updated WordPress compatibility (Tested up to: 6.3).
+
 = 1.2.3 (March 9, 2023) =
 * Added: SD+ Splatter Paint 2
 
