@@ -1,11 +1,11 @@
 === Shape Dividers Plus for Elementor ===
 Contributors: mdburnette
 Tags: elementor, layout, design, page builder
-Requires at least: 5.0
-Tested up to: 6.9.1
+Requires at least: 6.5
+Tested up to: 7.1
 Requires PHP: 7.0
 Requires Plugins: elementor
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,11 @@ Alternative (manual):
 7. Dividers - SD+ Offroad Tire Tread, SD+ Holiday Lights
 
 == Changelog ==
+= 1.2.6 (2026-10-07) =
+* Add WordPress 6.5 as the minimum supported version and update the Tested up to value to 7.1.
+* Fix small or misplaced native and custom dividers by loading Elementor's shared divider stylesheet on the frontend and in the editor preview.
+* Document troubleshooting and cache-clearing steps for divider positioning issues.
+
 = 1.2.5 (February 14, 2026) =
 * Improved: removed unreferenced legacy SVG assets to reduce plugin package size.
 * Improved: optimized divider SVG files for smaller payloads and faster rendering.

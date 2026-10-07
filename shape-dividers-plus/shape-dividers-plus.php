@@ -3,10 +3,10 @@
 Plugin Name: Shape Dividers Plus
 Plugin URI: https://mburnette.com/shape-dividers-plus/
 Description: Adds a number of additional custom shape divider options for Elementor
-Version: 1.2.5
-Requires at least: 5.0
+Version: 1.2.6
+Requires at least: 6.5
 Requires PHP: 7.0
-Tested up to: 6.9.1
+Tested up to: 7.1
 Requires Plugins: elementor
 Author: Marcus Burnette
 Author URI: https://mburnette.com
@@ -66,6 +66,23 @@ function sdpfe_maybe_show_elementor_notice() {
 	<?php
 }
 add_action( 'admin_notices', 'sdpfe_maybe_show_elementor_notice' );
+
+/**
+ * Keep Elementor's shared divider styles available on the frontend and preview.
+ *
+ * Elementor loads these styles conditionally. Cached or embedded templates can
+ * contain divider markup without loading the stylesheet, leaving both native
+ * and custom dividers in the normal content flow instead of at the section edge.
+ * Older Elementor versions include these rules in the main frontend stylesheet.
+ *
+ * @return void
+ */
+function sdpfe_enqueue_divider_styles() {
+	if ( wp_style_is( 'e-shapes', 'registered' ) ) {
+		wp_enqueue_style( 'e-shapes' );
+	}
+}
+add_action( 'elementor/frontend/after_enqueue_styles', 'sdpfe_enqueue_divider_styles' );
 
 /**
  * Return the plugin's custom shape definitions.
